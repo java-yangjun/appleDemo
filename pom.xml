@@ -11,6 +11,7 @@
 
 	<modules>
 		<module>bootstrap</module>
+		<module>channel-api</module>
 	</modules>
 
 	<properties>

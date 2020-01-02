@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration debug="true">
+    <jmxConfigurator/>
+    <springProperty scope="context" name="app_name" source="spring.application.name"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%date [%thread] %-5level %logger{36}- %msg%n</pattern>
+        </layout>
+    </appender>
+    <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="RollingFile">
+        <file>logs/application.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/application-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>20MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%level] %logger:%L - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--添加邮箱监控-->
+    <appender name="Sentry" class="com.getsentry.raven.logback.SentryAppender">
+        <!--每个项目生成不通的key-->
+        <dsn>http://f1793f53e91b44359df94d12506adc21:0ab7d664f7ac411996fece14a13f551e@sentry.pluosi.com/42</dsn>
+        <!-- 设置拦截的最低级别为 error 警告-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <logger name="logback.SentryAppenderIT" level="INFO">
+        <appender-ref ref="Sentry"/>
+    </logger>
+
+    <springProfile name="dev">
+        <root>
+            <level value="INFO"/>
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="KafkaAppender"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </springProfile>
+    <springProfile name="fat">
+        <root>
+            <level value="INFO"/>
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="KafkaAppender"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </springProfile>
+    <springProfile name="uat">
+        <root>
+            <level value="INFO"/>
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="KafkaAppender"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </springProfile>
+    <springProfile name="pre">
+        <root>
+            <level value="INFO"/>
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="KafkaAppender"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </springProfile>
+    <springProfile name="pro">
+        <root>
+            <level value="INFO"/>
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="KafkaAppender"/>
+            <appender-ref ref="Sentry"/>
+        </root>
+    </springProfile>
+</configuration>

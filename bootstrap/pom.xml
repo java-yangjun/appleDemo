@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.jung.channel</groupId>
+            <artifactId>channel-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
