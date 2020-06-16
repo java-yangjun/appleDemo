@@ -50,7 +50,7 @@
 		<mysql-version>5.1.35</mysql-version>
 		<fastjson-version>1.2.51</fastjson-version>
 		<lombok-version>1.18.4</lombok-version>
-		<guava-version>23.3-jre</guava-version>
+		<guava-version>24.1.1-jre</guava-version>
 		<scripts_bootMain>ActivityGatewayApplication</scripts_bootMain>
 		<loan-common-model-tenant>6.0.2</loan-common-model-tenant>
 		<loan-common-tenant>6.0.1</loan-common-tenant>
