@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e3dcc-461d-4a50-af46-27fdf73b8e7f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/jung/channel/bootstrap/ChannelApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/jung/channel/bootstrap/ChannelApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/channel-api/src/main/java/com/jung/channel/api/controller/LoginPhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/channel-api/src/main/java/com/jung/channel/api/controller/LoginPhoneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,7 +453,7 @@
       <workItem from="1644228737377" duration="26568000" />
       <workItem from="1774624580050" duration="2580000" />
       <workItem from="1774628885631" duration="32000" />
-      <workItem from="1774667660861" duration="3018000" />
+      <workItem from="1774667660861" duration="3440000" />
     </task>
     <servers />
   </component>
