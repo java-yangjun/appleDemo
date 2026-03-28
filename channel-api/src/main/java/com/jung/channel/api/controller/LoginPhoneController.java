@@ -17,6 +17,10 @@ public class LoginPhoneController {
     @ApiOperation(value="中台调用此接口根据openId获取手机号", notes="")
     @PostMapping(value = "/getPhoneByOpenId", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public void getLoginPhoneByOpenId() {
+        log.info("中台调用此接口根据openId获取手机号");
+        log.info("gitHub 提交测试");
+
+
     }
 
 }
